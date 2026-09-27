@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>January 27 | Gaming Profile & Bio Links</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & Orbitron for Cyberpunk / Gaming aesthetics -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            gaming: ['Orbitron', 'sans-serif'],
+          },
+          colors: {
+            accentCyan: '#00f2fe',
+            accentPurple: '#a855f7',
+            accentRed: '#ff2a5f',
+            accentGreen: '#00ff66',
+            zaloBlue: '#0088FF',
+            telegramBlue: '#2AABEE',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Global Page Styling */
+    body {
+      background-color: #0b0914;
+      background-image: 
+        radial-gradient(circle at 50% 10%, rgba(168, 85, 247, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 10% 50%, rgba(0, 242, 254, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 42, 95, 0.1) 0%, transparent 40%);
+      background-attachment: fixed;
+      color: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background grid line pattern */
+    .bg-grid {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+
+    /* GLASS CARD BASE STYLING */
+    .border-runner-card {
+      position: relative;
+      background: rgba(16, 14, 26, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .border-runner-card:hover {
+      transform: translateY(-3px);
+    }
+
+    /* RUNNING BORDER ANIMATION (HIỆU ỨNG CHẠY THEO VIỀN) */
+    /* Continuous rotating gradient beam behind card content */
+    .border-runner-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        transparent 0deg,
+        transparent 280deg,
+        var(--border-glow-color, #00f2fe) 320deg,
+        var(--border-glow-color-secondary, #a855f7) 360deg
+      );
+      animation: rotate-border 4s linear infinite;
+      z-index: 0;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+
+    .border-runner-card:hover::before {
+      opacity: 1;
+      animation-duration: 2.5s; /* Speed up on hover */
+    }
+
+    /* Inner overlay masking to leave only a thin running border visible */
+    .border-runner-card::after {
+      content: '';
+      position: absolute;
+      inset: 1.5px; /* Border thickness */
+      background: rgba(15, 13, 24, 0.92);
+      border-radius: 15px;
+      z-index: 1;
+      transition: background 0.3s ease;
+    }
+
+    .border-runner-card:hover::after {
+      background: rgba(22, 19, 36, 0.94);
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2; /* Keep interactive content above border layer */
+    }
+
+    @keyframes rotate-border {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* CARD-SPECIFIC BORDER COLORS */
+    .border-cyan {
+      --border-glow-color: #00f2fe;
+      --border-glow-color-secondary: #00ff66;
+    }
+    .border-purple {
+      --border-glow-color: #a855f7;
+      --border-glow-color-secondary: #00f2fe;
+    }
+    .border-red {
+      --border-glow-color: #ff2a5f;
+      --border-glow-color-secondary: #ff7e5f;
+    }
+    .border-zalo {
+      --border-glow-color: #0088FF;
+      --border-glow-color-secondary: #00f2fe;
+    }
+    .border-telegram {
+      --border-glow-color: #2AABEE;
+      --border-glow-color-secondary: #00ff66;
+    }
+
+    /* HOVER GLOW FX */
+    .border-cyan:hover { box-shadow: 0 0 25px rgba(0, 242, 254, 0.25); }
+    .border-purple:hover { box-shadow: 0 0 25px rgba(168, 85, 247, 0.25); }
+    .border-red:hover { box-shadow: 0 0 25px rgba(255, 42, 95, 0.25); }
+    .border-zalo:hover { box-shadow: 0 0 25px rgba(0, 136, 255, 0.25); }
+    .border-telegram:hover { box-shadow: 0 0 25px rgba(42, 171, 238, 0.25); }
+
+    /* TOAST NOTIFICATION STYLING */
+    #toast {
+      visibility: hidden;
+      min-width: 260px;
+      background-color: #1a162b;
+      color: #fff;
+      text-align: center;
+      border-radius: 12px;
+      padding: 12px 20px;
+      position: fixed;
+      z-index: 50;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+      border: 1px solid rgba(0, 242, 254, 0.4);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 242, 254, 0.2);
+      opacity: 0;
+      transition: opacity 0.3s, bottom 0.3s, visibility 0.3s;
+    }
+
+    #toast.show {
+      visibility: visible;
+      opacity: 1;
+      bottom: 45px;
+    }
+  </style>
+</head>
+
+<body class="bg-grid flex flex-col items-center justify-start min-h-screen py-8 px-4 select-none">
+
+  <!-- MAIN LINK CONTAINER -->
+  <div class="w-full max-w-md flex flex-col gap-5 relative z-10">
+
+    <!-- HEADER PROFILE CARD -->
+    <div class="border-runner-card border-purple p-6 text-center">
+      <div class="card-content flex flex-col items-center">
+        <!-- Avatar with Glowing Online Status Badge -->
+        <div class="relative mb-3">
+          <img 
+            src="https://cdn.corenexis.com/f/8ZB26u2dYPV.png" 
+            alt="103_PU Avatar" 
+            class="w-24 h-24 rounded-full object-cover border-2 border-white/20 shadow-2xl"
+            onerror="this.src='https://placehold.co/200x200/1e1b4b/ffffff?text=POARUS_009'"
+          />
+          <!-- Online status dot -->
+          <span class="absolute bottom-1 right-1 w-5 h-5 bg-accentGreen border-2 border-slate-950 rounded-full shadow-lg shadow-emerald-500/50 animate-pulse"></span>
+        </div>
+
+        <!-- Name & Tagline -->
+        <h1 class="font-gaming font-black text-2xl tracking-wider text-white drop-shadow-[0_2px_12px_rgba(255,255,255,0.3)]">
+          POARUS_009
+        </h1>
+        <p class="text-xs font-semibold tracking-wider text-gray-400 mt-1 uppercase">
+          Gaming Creator & Streamer
+        </p>
+      </div>
+    </div>
+
+    <!-- SECTION 1: SOCIAL MEDIA -->
+    <div class="flex flex-col gap-3 mt-1">
+      <!-- Section Divider Title -->
+      <div class="flex items-center gap-2 text-accentCyan font-gaming text-xs tracking-widest uppercase font-bold">
+        <span>///</span>
+        <span>SOCIAL MEDIA</span>
+        <div class="h-[1px] bg-accentCyan/30 flex-grow ml-1"></div>
+      </div>
+
+      <!-- 1. TikTok Channel -->
+      <a href="https://tiktok.com/@user_2701208” target="_blank" rel="noopener noreferrer" onclick="handleCardClick(event, 'Đang mở kênh TikTok...')" 
+         class="border-runner-card border-cyan p-4">
+        <div class="card-content flex items-center justify-between">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-xl bg-black/70 flex items-center justify-center text-2xl text-white border border-white/10">
+              <i class="fa-brands fa-tiktok"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-base text-white">TikTok Channel</h3>
+              <p class="text-xs text-gray-400">Highlights & Funny Moments</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-gaming font-semibold bg-white/10 text-white px-2.5 py-1 rounded-md border border-white/10 tracking-wider">
+              MAIN CHANNEL
+            </span>
+            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400">
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2. Email Card (Replaced My Portfolio) -->
+      <div onclick="copyEmail(event, 'longvanhoang.xyz@gmail.com')" 
+           class="border-runner-card border-purple p-4">
+        <div class="card-content flex items-center justify-between">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-xl bg-purple-950/60 flex items-center justify-center text-xl text-purple-400 border border-purple-500/20">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-base text-white">Email Contact</h3>
+              <p class="text-xs text-gray-400">longvanhoang.xyz@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-gaming font-semibold bg-purple-500/20 text-purple-300 px-2.5 py-1 rounded-md border border-purple-500/30 tracking-wider">
+              SAO CHÉP
+            </span>
+            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400">
+              <i class="fa-solid fa-copy text-xs"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2-Column Grid: YouTube & Discord -->
+      <div class="grid grid-cols-2 gap-3 mt-0.5">
+        <!-- 3. YouTube Card -->
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" onclick="handleCardClick(event, 'Đang chuyển đến YouTube...')" 
+           class="border-runner-card border-red p-5 text-center">
+          <div class="card-content flex flex-col items-center">
+            <div class="text-3xl text-red-500 mb-2">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <h4 class="font-gaming font-bold text-sm text-white tracking-wide">YOUTUBE</h4>
+            <p class="text-[11px] text-gray-400 mt-0.5">Subscribe For Me</p>
+          </div>
+        </a>
+
+        <!-- 4. Discord Card -->
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" onclick="handleCardClick(event, 'Đang kết nối Server Discord...')" 
+           class="border-runner-card border-purple p-5 text-center relative">
+          <div class="card-content flex flex-col items-center">
+            <!-- Online green dot indicator -->
+            <span class="absolute top-1 right-1 w-2.5 h-2.5 bg-accentGreen rounded-full shadow-md shadow-emerald-500/50"></span>
+            <div class="text-3xl text-indigo-400 mb-2">
+              <i class="fa-brands fa-discord"></i>
+            </div>
+            <h4 class="font-gaming font-bold text-sm text-white tracking-wide">DISCORD</h4>
+            <p class="text-[11px] text-gray-400 mt-0.5">Join My Server</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- SECTION 2: CONTACT & TOOLS (Updated with Zalo and Telegram) -->
+    <div class="flex flex-col gap-3 mt-1">
+      <!-- Section Divider Title -->
+      <div class="flex items-center gap-2 text-accentPurple font-gaming text-xs tracking-widest uppercase font-bold">
+        <span>///</span>
+        <span>CONTACT & TOOLS</span>
+        <div class="h-[1px] bg-accentPurple/30 flex-grow ml-1"></div>
+      </div>
+
+      <!-- 2-Column Grid: Zalo & Telegram -->
+      <div class="grid grid-cols-2 gap-3">
+        <!-- 1. Zalo Card (Replaced Tweaks) -->
+        <a href="https://zalo.me/0335469349" target="_blank" rel="noopener noreferrer" onclick="handleCardClick(event, 'Mở nhắn tin Zalo...')" 
+           class="border-runner-card border-zalo p-5 text-center">
+          <div class="card-content flex flex-col items-center">
+            <div class="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-400/40 flex items-center justify-center text-zaloBlue mb-2">
+              <i class="fa-solid fa-comment-dots text-xl"></i>
+            </div>
+            <h4 class="font-gaming font-bold text-sm text-white tracking-wide">ZALO</h4>
+            <p class="text-[11px] text-gray-400 mt-0.5">Chat Với Tôi</p>
+          </div>
+        </a>
+
+        <!-- 2. Telegram Card (Replaced License) -->
+        <a href="https://web.telegram.org/k/" target="_blank" rel="noopener noreferrer" onclick="handleCardClick(event, 'Đang mở Telegram...')" 
+           class="border-runner-card border-telegram p-5 text-center">
+          <div class="card-content flex flex-col items-center">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-telegramBlue mb-2">
+              <i class="fa-brands fa-telegram text-xl"></i>
+            </div>
+            <h4 class="font-gaming font-bold text-sm text-white tracking-wide">TELEGRAM</h4>
+            <p class="text-[11px] text-gray-400 mt-0.5">Kênh / Tin Nhắn Direct</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- SECTION 3: GAME ZONE -->
+    <div class="flex flex-col gap-3 mt-1">
+      <!-- Section Divider Title -->
+      <div class="flex items-center gap-2 text-accentRed font-gaming text-xs tracking-widest uppercase font-bold">
+        <span>[</span>
+        <span>GAME ZONE</span>
+        <span>]</span>
+        <div class="h-[1px] bg-accentRed/30 flex-grow ml-1"></div>
+      </div>
+
+      <!-- Valorant Card -->
+      <a href="https://link4m.net/hxTIQh" target="_blank" rel="noopener noreferrer" onclick="handleCardClick(event, 'Xem thông tin Valorant...')" 
+         class="border-runner-card border-red p-4">
+        <div class="card-content flex items-center justify-between">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-xl bg-red-950/60 border border-red-500/30 flex items-center justify-center text-2xl text-accentRed">
+              <i class="fa-solid fa-v text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-gaming font-bold text-base text-white">FILE MAGIC BODY</h3>
+              <p class="text-xs text-gray-400"></p>
+            </div>
+          </div>
+
+          <div class="pr-2 text-gray-500">
+            <i class="fa-solid fa-crosshairs text-lg"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2-Column Grid: Roblox & ZingSpeed -->
+      <div class="grid grid-cols-2 gap-3">
+        <!-- Roblox Card -->
+        <a href="https://www.mediafire.com/file/54qs6gwcgy0ig8o/3105-2.0-unsigned.ipa/file" target="_blank" rel="noopener noreferrer" onclick="handleCardClick(event, 'Đang mở 3105...')" 
+           class="border-runner-card border-cyan p-5 text-center">
+          <div class="card-content flex flex-col items-center">
+            <div class="text-3xl text-gray-200 mb-2">
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <h4 class="font-gaming font-bold text-sm text-white tracking-wide">3105-2.0-unsigned</h4>
+            <p class="text-[11px] text-gray-400 mt-0.5">Time For Creations</p>
+          </div>
+        </a>
+
+        <!-- ZingSpeed Card -->
+        <a href="#zingspeed" onclick="handleCardClick(event, 'Đang mở ZingSpeed...')" 
+           class="border-runner-card border-purple p-5 text-center">
+          <div class="card-content flex flex-col items-center">
+            <div class="w-10 h-10 rounded-xl overflow-hidden border border-white/20 mb-2">
+              <img 
+                src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&q=80&w=100&h=100" 
+                alt="ZingSpeed Icon"
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/100x100/3b0764/ffffff?text=ZS'"
+              />
+            </div>
+            <h4 class="font-gaming font-bold text-sm text-white tracking-wide">ZINGSPEED</h4>
+            <p class="text-[11px] text-gray-400 mt-0.5">Let's Drift Together</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- SECTION 4: OTHERS DIVIDER FOOTER -->
+    <div class="flex items-center justify-center gap-3 my-3 opacity-60">
+      <span class="text-xs font-gaming text-gray-400 tracking-wider">:: OTHERS ::</span>
+      <div class="h-[1px] bg-gray-600/40 w-32"></div>
+    </div>
+
+  </div>
+
+  <!-- TOAST NOTIFICATION UI -->
+  <div id="toast">
+    <div class="flex items-center gap-2 justify-center">
+      <i class="fa-solid fa-circle-check text-accentCyan"></i>
+      <span id="toast-message" class="text-xs font-medium">Thông báo</span>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Show Toast Notification
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      const toastMsg = document.getElementById("toast-message");
+      
+      toastMsg.innerText = message;
+      toast.classList.add("show");
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2500);
+    }
+
+    // Handle normal card clicks
+    function handleCardClick(event, message) {
+      showToast(message);
+    }
+
+    // Copy Email to clipboard with compatibility fallback
+    function copyEmail(event, emailText) {
+      event.preventDefault();
+      
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(emailText).then(() => {
+          showToast("Đã sao chép Email: " + emailText);
+        }).catch(() => {
+          fallbackCopyText(emailText);
+        });
+      } else {
+        fallbackCopyText(emailText);
+      }
+    }
+
+    function fallbackCopyText(text) {
+      const tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      showToast("Đã sao chép Email: " + text);
+    }
+  </script>
+</body>
+</html>
